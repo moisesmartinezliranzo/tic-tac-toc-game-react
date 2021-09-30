@@ -1,3 +1,3 @@
-export const Square = () => {
-  return <button>Square</button>;
+export const Square = ({ value }) => {
+  return <button className="square">{value}</button>;
 };
