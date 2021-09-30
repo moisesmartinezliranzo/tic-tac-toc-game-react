@@ -1,3 +1,3 @@
 export const Square = () => {
-  return <div>Square</div>;
+  return <button>Square</button>;
 };
