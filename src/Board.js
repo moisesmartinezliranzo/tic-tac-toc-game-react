@@ -8,20 +8,20 @@ export const Board = () => {
 
   return (
     <div>
-      <div>
-        <div>{renderSquare(1)}</div>
-        <div>{renderSquare(2)}</div>
-        <div>{renderSquare(3)}</div>
+      <div className="board-row">
+        {renderSquare(1)}
+        {renderSquare(2)}
+        {renderSquare(3)}
       </div>
-      <div>
-        <div>{renderSquare(4)}</div>
-        <div>{renderSquare(5)}</div>
-        <div>{renderSquare(6)}</div>
+      <div className="board-row">
+        {renderSquare(4)}
+        {renderSquare(5)}
+        {renderSquare(6)}
       </div>
-      <div>
-        <div>{renderSquare(7)}</div>
-        <div>{renderSquare(8)}</div>
-        <div>{renderSquare(9)}</div>
+      <div className="board-row">
+        {renderSquare(7)}
+        {renderSquare(8)}
+        {renderSquare(9)}
       </div>
     </div>
   );
