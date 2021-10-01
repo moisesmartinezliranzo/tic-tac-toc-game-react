@@ -7,7 +7,6 @@ export const Game = () => {
   let status = `Next player: ${xIsNext ? "X" : "O"}`;
 
   const handleClick = (i) => {
-    console.log(i);
     const newSquares = [...squares];
 
     if (calculateWinner(squares) || squares[i]) {
