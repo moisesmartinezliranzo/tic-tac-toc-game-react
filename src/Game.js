@@ -5,6 +5,7 @@ export const Game = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
   let status = `Next player: ${xIsNext ? "X" : "O"}`;
+  let statusWrapper = document.querySelector("#status");
 
   const handleClick = (i) => {
     const newSquares = [...squares];
@@ -48,6 +49,7 @@ export const Game = () => {
 
   if (winner) {
     status = `Winner: ${winner}`;
+    statusWrapper.classList.add("animate__shakeX");
   } else {
     status = `Next player: ${xIsNext ? "X" : "O"}`;
   }
@@ -55,9 +57,15 @@ export const Game = () => {
   return (
     <div className="game">
       <div className="game-board">
-        <Board squares={squares} onClick={(e) => handleClick(e)} />
+        <Board
+          squares={squares}
+          xIsNext={xIsNext}
+          onClick={(e) => handleClick(e)}
+        />
         <div>
-          <div className="status">{status}</div>
+          <div className="status animate__animated" id="status">
+            {status}
+          </div>
         </div>
       </div>
     </div>

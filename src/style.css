@@ -1,6 +1,29 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 112, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 112, 0, 1) 0%,
+    rgba(255, 152, 0, 1) 50%,
+    rgba(255, 112, 0, 1) 100%
+  );
 }
 
 ol,
@@ -15,30 +38,83 @@ ul {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: transparent;
+  border: 0;
   float: left;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+
+  height: 70px;
+
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 70px;
 }
+
+.square.x {
+  color: #f24601;
+}
+
+.square.o {
+  color: #0dee8a;
+}
+
+.game .game-board .board-row:nth-child(1) .square:nth-child(1) {
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(1) .square:nth-child(2) {
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(1) .square:nth-child(3) {
+}
+
+.game .game-board .board-row:nth-child(2) .square:nth-child(1) {
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(2) .square:nth-child(2) {
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(2) .square:nth-child(3) {
+  border-top: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(3) .square:nth-child(1) {
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(3) .square:nth-child(2) {
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+}
+
+.game .game-board .board-row:nth-child(3) .square:nth-child(3) {
+  border-top: 4px solid #000;
+}
+
+/* .square:nth-child(1) {
+  background-color: red;
+} */
 
 .square:focus {
   outline: none;
 }
 
 .kbd-navigation .square:focus {
-  background: #ddd;
+  /* background: #ddd; */
 }
 
 .game {
